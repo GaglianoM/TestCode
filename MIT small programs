@@ -1,0 +1,45 @@
+"""
+Created on 7/16/2018 @ 2:39PM CST
+
+Author: Michael Gagliano
+"""
+
+## Iterations; string slicing ##
+## 's' is an arbitrary string of characters
+
+s = 'azcbobobegghakl'
+maxLen = 0
+current = s[0]
+longest = s[0]
+
+# step through s indices
+for i in range(len(s) - 1):
+    if s[i + 1] >= s[i]:
+        current += s[i + 1]
+        # if current length is bigger update
+        if len(current) > maxLen:
+            maxLen = len(current)
+            longest = current
+    else:
+        current = s[i + 1]
+
+    i += 1
+print('Longest substring in alphabetical order is: ' + longest)
+
+## Iterative Greatest Common Divisor ##
+
+def gcdIter(a, b):
+    while b != 0:
+        (a,b) = (b, a % b)
+    return a
+print(gcdIter(3,27))
+
+## Recrusive Greatest Common Divisor ##
+
+def gcdRecur(a, b):
+    if b == 0:
+      return a
+    else:
+      return gcdRecur(b, a % b)
+        
+        

@@ -1,6 +1,7 @@
 ##Scratch work from Head First With Python, 2nd Edition##
 ##Chapter 1##
 
+## Odd or Even Minute Program ##
 
 from datetime import datetime
 import time
@@ -21,3 +22,14 @@ for i in range(5):
     time.sleep(wait_time)   ##To pause the function at random intervals and intermittently continue the iteration
 
 
+## Vowel Searching Program ##
+
+word = input("Provide a word to search for vowels: ")
+vowels = ['a', 'e', 'i', 'o', 'u']
+found = []
+for letter in word:
+    if letter in vowels:
+        if letter not in found:
+            found.append(letter)
+for vowels in found:
+    print(vowels)

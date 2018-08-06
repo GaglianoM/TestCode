@@ -1,0 +1,20 @@
+##Created by: Michael Gagliano##
+##99 Bottles Song using 'for' Iteration##
+
+
+
+word = "bottles"
+for num_bottles in range(99, 0, -1):
+    print(num_bottles, word, "of beer on the wall.")
+    print(num_bottles, word, "of beer.")
+    print("Take one down, pass it around")
+    if num_bottles == 1:
+        print("No more bottles of beer on the wall!")
+    else:
+        num_bottles -= 1
+        if num_bottles == 1:
+            word = "bottle"
+            print(num_bottles, word, "of beer on the wall!")
+        else:
+            print(num_bottles, word, "of beer on the wall.")
+print()
